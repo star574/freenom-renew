@@ -18,7 +18,3 @@ jobs:
         run: echo -e "FREENOM_PASSWORD='${{secrets.PASSWORD}}'\nFREENOM_USERNAME='${{secrets.USERNAME}}'" >> .env  
       - name: docker run 
         run: docker run -i --name freenom  -v $(pwd):/conf -v $(pwd)/logs:/app/logs luolongfei/freenom
-      - name: wait
-        run: sleep 10s
-      - name: log
-        run: docker logs freenom
