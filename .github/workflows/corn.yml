@@ -12,6 +12,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
+      - name: ping
+        run: ping my.freenom.com
       - name: download env
         run: wget https://raw.githubusercontent.com/star574/freenom/main/.env.example && cp .env.example .env
       - name: user
